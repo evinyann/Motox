@@ -1,0 +1,974 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #080808;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+}
+
+
+/* HEADER */
+
+.header {
+    height: 80px;
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    z-index: 1000;
+
+    background: rgba(8, 8, 8, 0.92);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid #222;
+}
+
+
+.logo {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+
+    letter-spacing: 3px;
+}
+
+
+.logo span {
+    color: #e10600;
+}
+
+
+.nav {
+    display: flex;
+    gap: 35px;
+}
+
+
+.nav a {
+    color: #aaa;
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.nav a:hover {
+    color: #fff;
+}
+
+
+.menu-btn {
+    display: none;
+
+    background: none;
+    border: 0;
+
+    color: white;
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+
+    padding: 120px 8% 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    overflow: hidden;
+}
+
+
+.hero-content {
+    max-width: 650px;
+    z-index: 2;
+}
+
+
+.small-title {
+    color: #e10600;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h1 {
+    font-family: "Orbitron", sans-serif;
+
+    font-size: clamp(45px, 7vw, 90px);
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h1 span {
+    color: transparent;
+
+    -webkit-text-stroke: 1px #fff;
+}
+
+
+.hero-text {
+    color: #999;
+
+    max-width: 520px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+
+.btn {
+    display: inline-block;
+
+    padding: 15px 28px;
+
+    text-decoration: none;
+
+    border: 1px solid #e10600;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+
+
+.primary {
+    background: #e10600;
+    color: white;
+}
+
+
+.primary:hover {
+    background: #ff1b14;
+
+    transform: translateY(-3px);
+}
+
+
+.secondary {
+    color: white;
+
+    border-color: #444;
+}
+
+
+.secondary:hover {
+    border-color: #fff;
+}
+
+
+/* HERO BIKE */
+
+.hero-bike {
+    width: 470px;
+    height: 470px;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.bike-circle {
+    width: 400px;
+    height: 400px;
+
+    border-radius: 50%;
+
+    border: 1px solid #333;
+
+    box-shadow:
+        0 0 60px rgba(225, 6, 0, 0.12),
+        inset 0 0 60px rgba(225, 6, 0, 0.08);
+}
+
+
+.bike-circle::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 45px;
+
+    border-radius: 50%;
+
+    border: 1px solid #222;
+}
+
+
+.bike-icon {
+    position: absolute;
+
+    font-size: 180px;
+
+    filter: grayscale(1);
+
+    animation: float 3s ease-in-out infinite;
+}
+
+
+.bike-text {
+    position: absolute;
+
+    font-family: "Orbitron";
+
+    font-weight: 900;
+
+    font-size: 45px;
+
+    color: #e10600;
+
+    transform: rotate(-15deg);
+
+    opacity: 0.8;
+}
+
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+
+/* BIKES */
+
+.bikes-section {
+    padding: 120px 8%;
+
+    background: #0c0c0c;
+}
+
+
+.section-title {
+    margin-bottom: 45px;
+}
+
+
+.section-title p {
+    color: #e10600;
+
+    letter-spacing: 4px;
+
+    font-family: "Orbitron";
+
+    font-size: 12px;
+
+    margin-bottom: 12px;
+}
+
+
+.section-title h2 {
+    font-family: "Orbitron";
+
+    font-size: clamp(30px, 5vw, 55px);
+}
+
+
+.section-title span {
+    color: #e10600;
+}
+
+
+/* SEARCH */
+
+.search-box {
+    margin-bottom: 25px;
+}
+
+
+.search-box input {
+    width: 100%;
+    max-width: 500px;
+
+    padding: 17px 20px;
+
+    background: #111;
+
+    color: white;
+
+    border: 1px solid #333;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+
+.search-box input:focus {
+    border-color: #e10600;
+}
+
+
+/* FILTERS */
+
+.brand-filters {
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 40px;
+
+    flex-wrap: wrap;
+}
+
+
+.filter {
+    padding: 12px 25px;
+
+    background: #111;
+
+    color: #aaa;
+
+    border: 1px solid #333;
+
+    cursor: pointer;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+
+.filter:hover,
+.filter.active {
+    background: #e10600;
+
+    color: white;
+
+    border-color: #e10600;
+}
+
+
+/* BIKE GRID */
+
+.bike-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.bike-card {
+    background: #111;
+
+    border: 1px solid #222;
+
+    transition: 0.4s;
+
+    overflow: hidden;
+}
+
+
+.bike-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #e10600;
+
+    box-shadow: 0 15px 40px rgba(225, 6, 0, 0.12);
+}
+
+
+/* BIKE IMAGE */
+
+.bike-image {
+    height: 240px;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle,
+            #292929 0%,
+            #111 55%,
+            #080808 100%
+        );
+}
+
+
+.brand {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    color: #777;
+
+    font-family: "Orbitron";
+
+    font-size: 11px;
+}
+
+
+.bike-placeholder {
+    font-family: "Orbitron";
+
+    font-weight: 900;
+
+    font-size: 32px;
+
+    color: #ddd;
+
+    text-align: center;
+
+    transform: skew(-10deg);
+
+    text-shadow:
+        0 0 25px rgba(255, 255, 255, 0.15);
+}
+
+
+/* BRAND COLORS */
+
+.bike-card[data-brand="YAMAHA"]
+.bike-placeholder {
+    color: #e10600;
+}
+
+
+.bike-card[data-brand="BMW"]
+.bike-placeholder {
+    color: #4a8cff;
+}
+
+
+.bike-card[data-brand="KAWASAKI"]
+.bike-placeholder {
+    color: #61d63d;
+}
+
+
+/* BIKE INFO */
+
+.bike-info {
+    padding: 25px;
+}
+
+
+.category {
+    color: #777;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 8px;
+}
+
+
+.bike-info h3 {
+    font-family: "Orbitron";
+
+    font-size: 18px;
+
+    min-height: 44px;
+
+    margin-bottom: 5px;
+}
+
+
+/* PRICE */
+
+.price {
+    color: #e10600;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    margin: 10px 0 18px;
+}
+
+
+.price-label {
+    color: #666;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    display: block;
+
+    margin-bottom: 4px;
+}
+
+
+/* SPECS */
+
+.specs {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 15px 0;
+
+    border-top: 1px solid #222;
+
+    border-bottom: 1px solid #222;
+}
+
+
+.specs div {
+    text-align: center;
+}
+
+
+.specs strong {
+    display: block;
+
+    font-size: 15px;
+}
+
+
+.specs small {
+    color: #777;
+
+    font-size: 9px;
+}
+
+
+.bike-info button {
+    margin-top: 20px;
+
+    background: none;
+
+    color: white;
+
+    border: 0;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+.bike-info button:hover {
+    color: #e10600;
+}
+
+
+/* ABOUT */
+
+.about {
+    padding: 140px 15%;
+
+    display: grid;
+
+    grid-template-columns: 150px 1fr;
+
+    gap: 50px;
+}
+
+
+.about-number {
+    font-family: "Orbitron";
+
+    font-size: 80px;
+
+    color: #222;
+}
+
+
+.about h2 {
+    font-family: "Orbitron";
+
+    font-size: clamp(30px, 5vw, 60px);
+
+    margin-bottom: 30px;
+}
+
+
+.about p:last-child {
+    max-width: 650px;
+
+    color: #888;
+
+    line-height: 1.9;
+}
+
+
+/* STATS */
+
+.stats {
+    padding: 70px 8%;
+
+    background: #e10600;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    text-align: center;
+}
+
+
+.stats strong {
+    display: block;
+
+    font-family: "Orbitron";
+
+    font-size: 45px;
+}
+
+
+.stats span {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+}
+
+
+/* CONTACT */
+
+.contact {
+    padding: 120px 8%;
+}
+
+
+.contact form {
+    max-width: 700px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+.contact input,
+.contact textarea {
+    padding: 18px;
+
+    background: #111;
+
+    border: 1px solid #333;
+
+    color: white;
+
+    outline: none;
+
+    font-family: inherit;
+}
+
+
+.contact textarea {
+    height: 160px;
+
+    resize: vertical;
+}
+
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: #e10600;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 40px 8%;
+
+    border-top: 1px solid #222;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+footer p {
+    color: #555;
+
+    font-size: 13px;
+}
+
+
+/* MODAL */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    z-index: 2000;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.modal-content {
+    width: 90%;
+
+    max-width: 500px;
+
+    background: #111;
+
+    border: 1px solid #e10600;
+
+    padding: 45px;
+
+    position: relative;
+
+    box-shadow:
+        0 0 60px rgba(225, 6, 0, 0.2);
+}
+
+
+.modal-content h2 {
+    font-family: "Orbitron";
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+
+.modal-content p:not(.small-title) {
+    color: #aaa;
+
+    margin-bottom: 30px;
+
+    line-height: 1.7;
+}
+
+
+.close {
+    position: absolute;
+
+    right: 20px;
+
+    top: 15px;
+
+    border: 0;
+
+    background: none;
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+
+    .bike-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* TABLET */
+
+@media (max-width: 850px) {
+
+    .bike-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-bike {
+        width: 350px;
+        height: 350px;
+    }
+
+    .bike-circle {
+        width: 300px;
+        height: 300px;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+
+    .nav {
+        display: none;
+
+        position: absolute;
+
+        top: 80px;
+        left: 0;
+
+        width: 100%;
+
+        background: #0c0c0c;
+
+        padding: 25px;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .nav.active {
+        display: flex;
+    }
+
+
+    .menu-btn {
+        display: block;
+    }
+
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding-top: 130px;
+    }
+
+
+    .hero-text {
+        margin: 0 auto 30px;
+    }
+
+
+    .hero-buttons {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+
+    .hero-bike {
+        margin-top: 50px;
+
+        width: 300px;
+
+        height: 300px;
+    }
+
+
+    .bike-circle {
+        width: 270px;
+
+        height: 270px;
+    }
+
+
+    .bike-icon {
+        font-size: 120px;
+    }
+
+
+    .bike-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .about {
+        padding: 100px 8%;
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-number {
+        font-size: 50px;
+    }
+
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 40px;
+    }
+
+
+    footer {
+        flex-direction: column;
+
+        gap: 20px;
+
+        text-align: center;
+    }
+
+}

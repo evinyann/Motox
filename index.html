@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="hy">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MOTOX — BMW • Yamaha • Kawasaki</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        MOTO<span>X</span>
+    </div>
+
+    <nav class="nav">
+        <a href="#home">Գլխավոր</a>
+        <a href="#bikes">Մոտոներ</a>
+        <a href="#about">Մեր մասին</a>
+        <a href="#contact">Կապ</a>
+    </nav>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            WELCOME TO THE WORLD OF
+        </p>
+
+        <h1>
+            TWO WHEELS.<br>
+            <span>ONE PASSION.</span>
+        </h1>
+
+        <p class="hero-text">
+            BMW, Yamaha և Kawasaki մոտոցիկլետների աշխարհը՝
+            արագություն, ուժ և ազատություն։
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#bikes" class="btn primary">
+                Դիտել մոտոները
+            </a>
+
+            <a href="#about" class="btn secondary">
+                Իմանալ ավելին
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-bike">
+
+        <div class="bike-circle"></div>
+
+        <div class="bike-text">
+            RIDE<br>
+            FAST
+        </div>
+
+        <div class="bike-icon">
+            🏍️
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BIKES -->
+
+<section id="bikes" class="bikes-section">
+
+    <div class="section-title">
+
+        <p>
+            OUR COLLECTION
+        </p>
+
+        <h2>
+            FEATURED <span>BIKES</span>
+        </h2>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Փնտրել մոտոցիկլետ..."
+            onkeyup="searchBikes()"
+        >
+
+    </div>
+
+
+    <!-- BRAND FILTERS -->
+
+    <div class="brand-filters">
+
+        <button
+            class="filter active"
+            onclick="filterBikes('ALL', this)">
+            ALL
+        </button>
+
+        <button
+            class="filter"
+            onclick="filterBikes('YAMAHA', this)">
+            YAMAHA
+        </button>
+
+        <button
+            class="filter"
+            onclick="filterBikes('BMW', this)">
+            BMW
+        </button>
+
+        <button
+            class="filter"
+            onclick="filterBikes('KAWASAKI', this)">
+            KAWASAKI
+        </button>
+
+    </div>
+
+
+    <!-- BIKE CARDS -->
+
+    <div
+        class="bike-grid"
+        id="bikeGrid">
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+
+    <div class="about-number">
+        01
+    </div>
+
+    <div>
+
+        <p class="small-title">
+            ABOUT MOTOX
+        </p>
+
+        <h2>
+            SPEED IS NOT<br>
+            JUST A NUMBER.
+        </h2>
+
+        <p>
+            MOTOX-ը ստեղծված է մոտոցիկլետների սիրահարների համար։
+            Այստեղ կարող ես ուսումնասիրել Yamaha, BMW և Kawasaki
+            մոտոցիկլետները, համեմատել դրանց բնութագրերը և
+            բացահայտել երկանիվների աշխարհը։
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section class="stats">
+
+    <div>
+        <strong>40+</strong>
+        <span>BIKES</span>
+    </div>
+
+    <div>
+        <strong>3</strong>
+        <span>BRANDS</span>
+    </div>
+
+    <div>
+        <strong>400+</strong>
+        <span>KM/H</span>
+    </div>
+
+    <div>
+        <strong>∞</strong>
+        <span>PASSION</span>
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+    <div class="section-title">
+
+        <p>
+            GET IN TOUCH
+        </p>
+
+        <h2>
+            CONTACT <span>US</span>
+        </h2>
+
+    </div>
+
+
+    <form onsubmit="sendMessage(event)">
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Քո անունը"
+            required
+        >
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            required
+        >
+
+        <textarea
+            id="message"
+            placeholder="Քո հաղորդագրությունը..."
+            required>
+        </textarea>
+
+        <button
+            class="btn primary"
+            type="submit">
+            Ուղարկել
+        </button>
+
+    </form>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="logo">
+        MOTO<span>X</span>
+    </div>
+
+    <p>
+        © 2026 MOTOX — Ride your passion.
+    </p>
+
+</footer>
+
+
+<!-- MODAL -->
+
+<div
+    id="modal"
+    class="modal">
+
+    <div class="modal-content">
+
+        <button
+            class="close"
+            onclick="closeModal()">
+            ×
+        </button>
+
+        <p class="small-title">
+            MOTOX
+        </p>
+
+        <h2 id="modalTitle">
+            Motorcycle
+        </h2>
+
+        <p id="modalText"></p>
+
+        <button
+            class="btn primary"
+            onclick="closeModal()">
+            Փակել
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
